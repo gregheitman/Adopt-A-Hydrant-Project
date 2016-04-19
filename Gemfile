@@ -1,15 +1,17 @@
-source 'https://rubygems.org'
-ruby '2.3.0'
+source 'http://rubygems.org'
+ruby '2.2.4'
 
 gem 'rails', '~> 4.2.6'
 
 gem 'arel'
+gem 'coffee-script-source', '1.8.0'
 gem 'devise'
 gem 'geokit'
 gem 'haml'
 gem 'http_accept_language'
 gem 'nokogiri'
 gem 'pg'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'rails_12factor'
 gem 'rails_admin'
 gem 'validates_formatting_of'

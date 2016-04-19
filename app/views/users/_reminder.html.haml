@@ -4,3 +4,10 @@
   = f.hidden_field "thing_id", :value => @thing.id
   %fieldset.control-group
     = f.submit t("buttons.send_reminder"), :class => "btn"
+
+= form_for :requestownerships, :url => requestownerships_path, :html => {:id => "requestownerships_form", :method => "post"} do |f|
+  = f.hidden_field "from_user_id", :value => current_user.id
+  = f.hidden_field "to_user_id", :value => @thing.user.id
+  = f.hidden_field "thing_id", :value => @thing.id
+  %fieldset.control-group
+    = f.submit t("buttons.request_ownership"), :class => "btn"

@@ -11,6 +11,12 @@
           = render :partial => "sidebar/search"
         - else
           = render :partial => "sidebar/combo_form"
+      #equipment
+      = link_to_image("C:/Users/Gregory/Desktop/tester/app/assets/images/shovel.png", 'http://www.grainger.com/category/snow-shovels-and-snow-pushers/snow-and-ice-removal/outdoor-equipment/ecatalog/N-ljw')
+
+      Click the picture above to browse awesome deals on snow shovels and equipment!
+
+
       #logos
         #col1
           %a{:href => "http://codeforamerica.org/"}
@@ -31,5 +37,8 @@
           %a{:href => URI.escape("mailto:adoptahydrant@cityofboston.gov?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} - #{t("links.feedback").titleize}")}
             = t("links.feedback")
     .table-cell.map-container
+      #weather
+      <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston"> </iframe>
       #map
         &nbsp;
+

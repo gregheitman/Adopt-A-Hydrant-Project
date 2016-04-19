@@ -11,7 +11,7 @@ $(function() {
     panControl: false,
     rotateControl: false,
     scaleControl: false,
-    scrollwheel: false,
+    scrollwheel: true,
     streetViewControl: true,
     zoom: 15,
     zoomControl: true
@@ -677,6 +677,43 @@ $(function() {
             'thing_id': activeThingId,
             'flash': {
               'notice': "<%= I18n.t("notices.reminder_sent") %>"
+            }
+          },
+          success: function(data) {
+            activeInfoWindow.close();
+            activeInfoWindow.setContent(data);
+            activeInfoWindow.open(map, activeMarker);
+          }
+        });
+      }
+    });
+    return false;
+  });
+  $('#requestownerships_form').live('submit', function() {
+    var submitButton = $("#requestownerships_form input[type='submit']");
+    $(submitButton).attr("disabled", true);
+    $.ajax({
+      type: 'POST',
+      url: '/requestownerships.json',
+      data: {
+        'utf8': '✓',
+        'authenticity_token': $('#requestownerships_form input[name="authenticity_token"]').val(),
+        'requestownerships': {
+          'to_user_id': $('#requestownerships_to_user_id').val(),
+          'thing_id': activeThingId
+        }
+      },
+      error: function(jqXHR) {
+        $(submitButton).attr("disabled", false);
+      },
+      success: function(data) {
+        $.ajax({
+          type: 'GET',
+          url: '/info_window',
+          data: {
+            'thing_id': activeThingId,
+            'flash': {
+              'notice': "<%= I18n.t("notices.request_sent") %>"
             }
           },
           success: function(data) {
