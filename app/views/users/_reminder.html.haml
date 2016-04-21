@@ -5,6 +5,19 @@
   %fieldset.control-group
     = f.submit t("buttons.send_reminder"), :class => "btn"
 
+// Name: Greg Heitman
+// Course: CSC 415-01
+// Semester: Spring 2016
+// Instructor: Dr. Pulimood
+// Project name: Adopt-A-Hydrant
+// Description: An open source application where users can claim responsibility for shoveling
+//              a fire hydrant in the city of Boston when it snows 
+// Filename: "app/views/users/_reminder.html.haml" 
+// Description: This portion of code establishes the form for the resource "requestownerships", which is defined in "app/config/routes.rb".
+//              It establishes the hidden fields associated with the resource, and specifies the physical button that appears in each individual
+//              fire hydrant window (Request Ownership).
+// Last modified on: 4/18/16
+
 = form_for :requestownerships, :url => requestownerships_path, :html => {:id => "requestownerships_form", :method => "post"} do |f|
   = f.hidden_field "from_user_id", :value => current_user.id
   = f.hidden_field "to_user_id", :value => @thing.user.id

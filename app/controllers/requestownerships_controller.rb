@@ -1,3 +1,16 @@
+# Name: Greg Heitman
+# Course: CSC 415-01
+# Semester: Spring 2016
+# Instructor: Dr. Pulimood
+# Project name: Adopt-A-Hydrant
+# Description: An open source application where users can claim responsibility for shoveling
+#              a fire hydrant in the city of Boston when it snows 
+# Filename: "app/controllers/requestownerships_controller.rb" 
+# Description: This is the controller file for requestownerships. It defines parameters, and it also calls
+#              the "ThingMailer" function that works with "json" to render the custom message being emailed to a user
+#              once they click the "Request Ownership" button on a specific hydrant.
+# Last modified on: 4/18/16
+
 class RequestownershipsController < ApplicationController
   respond_to :json
 

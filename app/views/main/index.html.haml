@@ -11,12 +11,6 @@
           = render :partial => "sidebar/search"
         - else
           = render :partial => "sidebar/combo_form"
-      #equipment
-      = link_to_image("C:/Users/Gregory/Desktop/tester/app/assets/images/shovel.png", 'http://www.grainger.com/category/snow-shovels-and-snow-pushers/snow-and-ice-removal/outdoor-equipment/ecatalog/N-ljw')
-
-      Click the picture above to browse awesome deals on snow shovels and equipment!
-
-
       #logos
         #col1
           %a{:href => "http://codeforamerica.org/"}
@@ -32,8 +26,25 @@
               = "#{t("sponsors.mayor.name")},"
               %em
                 = t("sponsors.mayor.title")
+
+// Name: Greg Heitman
+// Course: CSC 415-01
+// Semester: Spring 2016
+// Instructor: Dr. Pulimood
+// Project name: Adopt-A-Hydrant
+// Description: An open source application where users can claim responsibility for shoveling
+//              a fire hydrant in the city of Boston when it snows 
+// Filename: "app/views/main/index.html.haml" 
+// Description: This is the main index file that controls the HTML layout and display of the application. The portion below this comment is
+//              where I added the shovel.png image from app/assets/images/logos. I hyperlinked the picture of the shovel to a page on Grainger's
+//              website, which had a listing of snow shovels and snow equipment for sale. Below that in the map container, I have imported an app
+//              that tracks the weekly weather forecast for Boston, MA from forecast.io.
+// Last modified on: 4/18/16
       #feedback
         %p
+          Click the shovel to find great deals on snow shovels and equipment!
+          %a{:href => "http://www.grainger.com/category/snow-shovels-and-snow-pushers/snow-and-ice-removal/outdoor-equipment/ecatalog/N-ljw"}
+            = image_tag "logos/shovel.png", :alt => t("sponsors.snow"), :title => t("sponsors.snow")
           %a{:href => URI.escape("mailto:adoptahydrant@cityofboston.gov?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} - #{t("links.feedback").titleize}")}
             = t("links.feedback")
     .table-cell.map-container
