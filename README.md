@@ -10,6 +10,8 @@
 
 Claim responsibility for shoveling out a fire hydrant after it snows.
 
+The Adopt-A-Hydrant project is an innovation in social outreach and acts as a valuable communication tool for the community of Boston, Massachusetts. Sanitation workers cannot possibly reach all areas of the city immediately after a heavy snowstorm, so having ordinary citizens help out by clearing fire hydrants for emergency vehicles brings a sense of accountability in the community. The newly added live chat feature also contributes to the feeling of community amongst the users of my project. If this app is popular and successful in Boston it could potentially be moved to other areas typically hit hard with snow, such as Minneapolis,New York, or Vermont. People would wqnt to use my application because it is simplistic, useful, and tangible.
+
 ## Screenshot
 ![Adopt-a-Hydrant](https://github.com/codeforamerica/adopt-a-hydrant/raw/master/screenshot.png "Adopt-a-Hydrant")
 
